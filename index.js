@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var md = {};
 
-    var dataFolder = "data/";
+    var dataFolder = "data";
 
     // the div containing the menu
     var $menu = $('#menu');
@@ -249,7 +249,7 @@ $(document).ready(function () {
 
     // main loop, start loading index.json
 
-    $.getJSON('./' + dataFolder + 'index.json', function (data) {
+    $.getJSON('./' + dataFolder + '/index.json', function (data) {
         loadIndex(data, function (err) {
             if (err) {
                 alert('cannot load data');
