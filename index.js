@@ -2,6 +2,8 @@ $(document).ready(function () {
 
     var md = {};
 
+    var dataFolder = "data";
+
     // the div containing the menu
     var $menu = $('#menu');
     // main content area
@@ -104,7 +106,7 @@ $(document).ready(function () {
      */
     var loadTemplate = function (template, cb) {
         $.ajax({
-            url: './_data/templates/' + template + '.hbs',
+            url: './' + dataFolder + '/templates/' + template + '.hbs',
             error: function (err) {
                 cb(err);
             },
@@ -167,7 +169,7 @@ $(document).ready(function () {
     var fetchPage = function (item, cb) {
         $('#loading').show();
         $.ajax({
-            url: './_data/pages/' + item.page + '.md',
+            url: './' + dataFolder + '/pages/' + item.page + '.md',
             error: function (err) {
                 cb(err);
                 $('#loading').hide();
@@ -247,7 +249,7 @@ $(document).ready(function () {
 
     // main loop, start loading index.json
 
-    $.getJSON('./_data/index.json', function (data) {
+    $.getJSON('./' + dataFolder + 'index.json', function (data) {
         loadIndex(data, function (err) {
             if (err) {
                 alert('cannot load data');
