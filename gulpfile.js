@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     concatCss = require('gulp-concat-css');
 
 JS_FILES = [
@@ -13,13 +14,14 @@ JS_FILES = [
 
 CSS_FILES = [
     "node_modules/milligram/dist/milligram.min.css",
-    "node_modules/font-awesome/css/font-awesome.min.css",
+//    "node_modules/font-awesome/css/font-awesome.min.css",
     "./mdsite.css"
 ];
 
 gulp.task('minify', function () {
     gulp.src(JS_FILES)
         .pipe(uglify())
+        .pipe(concat("mdsite.js"))
         .pipe(gulp.dest('build'))
 });
 
@@ -29,6 +31,14 @@ gulp.task('css', function () {
         .pipe(gulp.dest('build'));
 
 });
+
+gulp.task('fonts', function () {
+    return gulp.src([
+                    'node_modules/font-awesome/fonts/fontawesome-webfont.*'])
+        .pipe(gulp.dest('font-awesome/fonts/'));
+});
+
+
 
 gulp.task('default', ['minify', 'css'], function () {
     // place code for your default task here
