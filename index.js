@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var md = {};
 
-    var dataFolder = "data";
+    var dataFolder = "data/";
 
     // the div containing the menu
     var $menu = $('#menu');
