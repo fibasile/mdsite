@@ -1,0 +1,25 @@
+{
+    "title": "mdsite",
+    "description": "markdown powered dynamic site generator",
+    "twitter": "http://twitter.com/fibasile",
+    "github": "http://github.com/fibasile",
+    "pages": [
+        {
+            "title": "Home",
+            "page": "index"
+        },
+        {
+            "title": "About me",
+            "page": "about"
+        },
+        {
+            "title": "Blog",
+            "page": "blog"
+        }
+    ],
+    "blog": [
+
+
+
+    ]
+}

@@ -1,0 +1,65 @@
+#sidebar {
+    text-align: right;
+}
+
+#header {
+    border-bottom: 1px solid #dedede;
+    padding-top: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 12px;
+}
+
+.fa {
+    transform: translateY(15%);
+}
+
+#notfound {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    padding-top: 200px;
+    min-height: 300px;
+}
+
+#container {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#avatar {
+    border-radius: 128px;
+}
+
+#hamburger {
+    display: inline;
+}
+
+.menu-item {
+    display: none;
+}
+
+
+/* Larger than mobile screen */
+
+@media (min-width: 40.0rem) {
+    #hamburger {
+        display: none;
+    }
+    .menu-item {
+        display: inline;
+    }
+}
+
+
+/* Larger than tablet screen */
+
+@media (min-width: 80.0rem) {}
+
+
+/* Larger than desktop screen */
+
+@media (min-width: 120.0rem) {}
